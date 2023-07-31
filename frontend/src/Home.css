@@ -72,11 +72,11 @@
   
  
   
-          @media (max-width: 53rem) {
-          .menu {
-              display: none;
+  @media (max-width: 53rem) {    
+    .menu {
+            display: none;
           }
-  
-          .menu-btn {
-              display: block;
+    
+    .menu-btn {
+            display: block;
           }}
