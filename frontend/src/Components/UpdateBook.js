@@ -21,6 +21,7 @@ const UpdateBook = () => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: 'include'
         }
       );
 
