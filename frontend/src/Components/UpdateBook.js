@@ -47,7 +47,7 @@ const UpdateBook = () => {
 
   const getSingleBook = async () => {
     const response = await fetch(
-      `https://library-management-web-app-server.vercel.app//api/book/getSingleBook/${id}`
+      `https://library-management-web-app-server.vercel.app/api/book/getSingleBook/${id}`
     );
     const result = await response.json();
 
