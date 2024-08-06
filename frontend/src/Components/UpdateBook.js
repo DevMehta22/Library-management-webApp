@@ -14,7 +14,7 @@ const UpdateBook = () => {
     try {
       const UpdatedBook = { book_name, book_author, book_price, date_of_issue };
       const book = await fetch(
-        `http://localhost:4000/api/book/UpdateBook/${id}`,
+        `https://library-management-web-app-server.vercel.app/api/book/UpdateBook/${id}`,
         {
           method: "PUT",
           body: JSON.stringify(UpdatedBook),
@@ -47,7 +47,7 @@ const UpdateBook = () => {
 
   const getSingleBook = async () => {
     const response = await fetch(
-      `http://localhost:4000/api/book/getSingleBook/${id}`
+      `https://library-management-web-app-server.vercel.app//api/book/getSingleBook/${id}`
     );
     const result = await response.json();
 
