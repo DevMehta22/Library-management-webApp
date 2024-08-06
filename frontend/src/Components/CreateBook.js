@@ -17,6 +17,7 @@ const CreateBook = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: 'include'
       });
 
       const result = await book.json();
