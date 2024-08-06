@@ -5,7 +5,12 @@ const app = express()
 const router = require("./routes/BookRoutes")
 const cors = require("cors")
 
-app.use(cors())
+const corsOptions = {
+  origin: 'https://library-management-web-app-frontend.vercel.app', // frontend origin
+  optionsSuccessStatus: 200 // For legacy browser support
+};
+
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use('/api/book',router)
 mongoose.connect(process.env.MONGO_URI).then(()=>{
