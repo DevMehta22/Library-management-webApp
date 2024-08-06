@@ -11,7 +11,7 @@ const CreateBook = () => {
   const handleSubmit = async () => {
     try {
       const AddBook = { book_name, book_author, book_price, date_of_issue };
-      const book = await fetch("http://localhost:4000/api/book/addBook", {
+      const book = await fetch("https://library-management-web-app-server.vercel.app/api/book/addBook", {
         method: "POST",
         body: JSON.stringify(AddBook),
         headers: {
