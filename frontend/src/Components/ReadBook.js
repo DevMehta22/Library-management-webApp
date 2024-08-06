@@ -7,6 +7,7 @@ const ReadBook = () => {
   const bookDetail = async () => {
     await fetch("https://library-management-web-app-server.vercel.app/api/book/getBooks", {
       method: "get",
+      credentials: 'include'
     })
       .then((res) => res.json())
       .then((i) => setdata(i.GetBook));
@@ -19,6 +20,7 @@ const ReadBook = () => {
       `http://localhost:4000/api/book/deleteBook/${id}`,
       {
         method: "DELETE",
+        credentials: 'include'
       }
     );
 
