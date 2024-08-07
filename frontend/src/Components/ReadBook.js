@@ -17,7 +17,7 @@ const ReadBook = () => {
 
   const handleDelete = async (id) => {
     const Delete = await fetch(
-      `http://localhost:4000/api/book/deleteBook/${id}`,
+      `https://library-management-web-app-server.vercel.app/api/book/deleteBook/${id}`,
       {
         method: "DELETE",
         credentials: 'include'
