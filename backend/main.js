@@ -7,7 +7,7 @@ const cors = require("cors")
 
 const corsOptions = {
   origin: ['https://library-management-web-app-frontend.vercel.app'], // frontend origin
-  mehtods:["POST","GET","PUT","PATCH","DELETE"],
+  methods:["POST","GET","PUT","PATCH","DELETE"],
   credentials:true
 };
 
