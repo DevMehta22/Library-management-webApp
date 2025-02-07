@@ -69,7 +69,7 @@ const Home = () => {
             </Link>
           </li>
         </ul>
-        <p>&copy;2023 Dev Mehta | All Rights Reserved</p>
+        <p>&copy;2025 Dev Mehta | All Rights Reserved</p>
       </footer>
     </>
   );
