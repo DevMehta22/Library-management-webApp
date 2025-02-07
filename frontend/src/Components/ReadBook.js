@@ -5,7 +5,7 @@ const ReadBook = () => {
   const [data, setdata] = useState([]);
   const [err, seterr] = useState("");
   const bookDetail = async () => {
-    await fetch("https://library-management-web-app-server.vercel.app/api/book/getBooks", {
+    await fetch("http://localhost:4000/api/book/getBooks", {
       method: "get",
       credentials: 'include'
     })
@@ -17,7 +17,7 @@ const ReadBook = () => {
 
   const handleDelete = async (id) => {
     const Delete = await fetch(
-      `https://library-management-web-app-server.vercel.app/api/book/deleteBook/${id}`,
+      `http://localhost:4000/api/book/deleteBook/${id}`,
       {
         method: "DELETE",
         credentials: 'include'

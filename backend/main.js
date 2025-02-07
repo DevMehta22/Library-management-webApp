@@ -6,7 +6,7 @@ const router = require("./routes/BookRoutes")
 const cors = require("cors")
 
 const corsOptions = {
-  origin: ['https://library-management-web-app-frontend.vercel.app'], // frontend origin
+  origin: ['https://library-management-web-app-frontend.vercel.app','http://localhost:3000'], // frontend origin
   methods:["POST","GET","PUT","PATCH","DELETE"],
   credentials:true
 };
