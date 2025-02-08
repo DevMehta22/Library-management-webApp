@@ -10,6 +10,11 @@ pipeline {
             steps {
                 echo 'cloning the repository'
                 git url:"https://github.com/DevMehta22/Library-management-webApp.git", branch:"ci-cd"
+                sh '''
+                ls -a
+                cd backend
+                ls -a
+                '''
             }
         }
         stage('build'){
