@@ -10,19 +10,16 @@ pipeline {
             steps {
                 echo 'cloning the repository'
                 git url:"https://github.com/DevMehta22/Library-management-webApp.git", branch:"ci-cd"
-                sh '''
-                ls -a
-                cd backend
-                ls -a
-                cat .env
-                '''
             }
         }
         stage('build'){
             steps {
                 echo "building the images"
                 withCredentials([file(credentialsId: 'backend-env-file', variable: 'BACKEND_ENV')]) {
-                sh 'cp $BACKEND_ENV backend/.env'
+                sh '''
+                rm -f backend/.env
+                cp $BACKEND_ENV backend/.env
+                    '''
                 }
                 sh 'docker-compose build'
             }
