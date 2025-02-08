@@ -14,6 +14,7 @@ pipeline {
                 ls -a
                 cd backend
                 ls -a
+                cat .env
                 '''
             }
         }
